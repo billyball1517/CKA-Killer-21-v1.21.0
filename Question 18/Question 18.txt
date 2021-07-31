@@ -1,1 +1,5 @@
+Use context: kubectl config use-context k8s-c3-CCC
 
+There seems to be an issue with the kubelet not running on cluster3-worker1. Fix it and confirm that cluster3 has node cluster3-worker1 available in Ready state afterwards. Schedule a Pod on cluster3-worker1.
+
+Write the reason of the is issue into /opt/course/18/reason.txt.
