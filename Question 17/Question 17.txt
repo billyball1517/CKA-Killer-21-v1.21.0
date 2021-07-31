@@ -1,1 +1,7 @@
+Use context: kubectl config use-context k8s-c1-H
 
+In Namespace project-tiger create a Pod named tigers-reunite of image httpd:2.4.41-alpine with labels pod=container and container=pod. Find out on which node the Pod is scheduled. Ssh into that node and find the docker container(s) belonging to that Pod.
+
+Write the docker IDs of the container(s) and the process/command these are running into /opt/course/17/pod-container.txt.
+
+Finally write the logs of the main docker container (from the one you specified in your yaml) into /opt/course/17/pod-container.log using the docker command.
