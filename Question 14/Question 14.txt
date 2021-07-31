@@ -1,0 +1,19 @@
+Use context: kubectl config use-context k8s-c1-H
+
+You're ask to find out following information about the cluster k8s-c1-H :
+
+How many master nodes are available?
+How many worker nodes are available?
+What is the Pod CIDR of cluster1-worker1?
+What is the Service CIDR?
+Which Networking (or CNI Plugin) is configured and where is its config file?
+Which suffix will static pods have that run on cluster1-worker1?
+Write your answers into file /opt/course/14/cluster-info, structured like this:
+
+# /opt/course/14/cluster-info
+1: [ANSWER]
+2: [ANSWER]
+3: [ANSWER]
+4: [ANSWER]
+5: [ANSWER]
+6: [ANSWER]
