@@ -1,5 +1,5 @@
 #k -n project-tiger create deployment --image=nginx:1.17.6-alpine deploy-important $do
-#the topologyKey can be any label on the node that can be used to sort them, hostname is easiest
+#the topologyKey can be any label on the node that can be used to sort them (kubectl get nodes --show-labels), hostname is easiest
 apiVersion: apps/v1
 kind: Deployment
 metadata:
