@@ -1,0 +1,39 @@
+#k -n project-tiger create deployment --image=nginx:1.17.6-alpine deploy-important $do
+#the topologyKey can be any label on the node that can be used to sort them, hostname is easiest
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    id: very-important                  # change
+  name: deploy-important
+  namespace: project-tiger              # important
+spec:
+  replicas: 3                           # change
+  selector:
+    matchLabels:
+      id: very-important                # change
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        id: very-important              # change
+    spec:
+      containers:
+      - image: nginx:1.17.6-alpine
+        name: container1                # change
+        resources: {}
+      - image: kubernetes/pause         # add
+        name: container2                # add
+      affinity:                                             # add
+        podAntiAffinity:                                    # add
+          requiredDuringSchedulingIgnoredDuringExecution:   # add
+          - labelSelector:                                  # add
+              matchExpressions:                             # add
+              - key: id                                     # add
+                operator: In                                # add
+                values:                                     # add
+                - very-important                            # add
+            topologyKey: kubernetes.io/hostname             # add
+status: {}
