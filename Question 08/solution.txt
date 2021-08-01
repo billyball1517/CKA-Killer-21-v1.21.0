@@ -1,4 +1,7 @@
 # /opt/course/8/master-components.txt
+#kubelet can be verified with 'systemctl status kubelet' or by alterativly looking in the '/etc/systemd/system/' directory
+#to see which are staic pod we can run 'kubectl get pods --namespace=kube-system | grep master' and can verify be looking in the '/etc/kubernetes/manifests/' directory
+#to see what the dns is running as we can simply run 'kubectl get all --namespace=kube-system | grep dns' and inspect the components
 kubelet: process
 kube-apiserver: static-pod
 kube-scheduler: static-pod
