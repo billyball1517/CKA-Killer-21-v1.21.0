@@ -1,0 +1,14 @@
+# kubectl -n project-hamster create rolebinding processor --role processor --serviceaccount project-hamster:processor
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: processor
+  namespace: project-hamster
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: processor
+subjects:
+- kind: ServiceAccount
+  name: processor
+  namespace: project-hamster
