@@ -1,0 +1,18 @@
+#manually schedule with: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodename
+#not reccomended generall because it can cause instability particularly in cloud environments
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: manual-schedule
+  name: manual-schedule
+spec:
+  nodeName: cluster2-master1
+  containers:
+  - image: httpd:2.4-alpine
+    name: manual-schedule
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
