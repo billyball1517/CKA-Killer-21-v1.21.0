@@ -1,0 +1,1 @@
+kubectl scale statefulset o3db --replicas=1 --record --namespace=project-c13
