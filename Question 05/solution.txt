@@ -1,0 +1,2 @@
+echo 'kubectl get pods --all-namespaces --sort-by=metadata.creationTimestamp' > /opt/course/5/find_pods.sh
+echo 'kubectl get pods --all-namespaces --sort-by=metadata.uid' > /opt/course/5/find_pods_uid.sh
