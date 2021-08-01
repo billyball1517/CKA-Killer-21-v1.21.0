@@ -1,0 +1,7 @@
+Use context: kubectl config use-context k8s-c3-CCC
+
+Make a backup of etcd running on cluster3-master1 and save it on the master node at /tmp/etcd-backup.db.
+
+Then create a Pod of your kind in the cluster.
+
+Finally restore the backup, confirm the cluster is still working and that the created Pod is no longer with us.
