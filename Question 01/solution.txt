@@ -1,0 +1,1 @@
+kubectl config get-contexts -o name > /opt/course/1/contexts
