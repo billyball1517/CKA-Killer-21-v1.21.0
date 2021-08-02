@@ -1,0 +1,4 @@
+kubectl api-resources --namespaced -o name > /opt/course/16/resources.txt
+#kubectl get role --namespace=project-c14 --no-headers | wc -l
+# /opt/course/16/crowded-namespace.txt
+project-c14 with 300 resources
