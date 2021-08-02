@@ -1,0 +1,7 @@
+#nothing too crazy here you can get the default file locations from the documentation
+
+openssl x509  -noout -text -in /var/lib/kubelet/pki/kubelet-client-current.pem | grep Issuer
+openssl x509  -noout -text -in /var/lib/kubelet/pki/kubelet-client-current.pem | grep "Extended Key Usage" -A1
+
+openssl x509  -noout -text -in /var/lib/kubelet/pki/kubelet.crt | grep Issuer
+openssl x509  -noout -text -in /var/lib/kubelet/pki/kubelet.crt | grep "Extended Key Usage" -A1
