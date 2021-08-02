@@ -1,0 +1,2 @@
+ssh cluster1-worker1 "docker ps | grep tigers-reunite" &> /opt/course/17/pod-container.txt
+ssh cluster1-worker1 "docker logs 9aaa99990174" &> /opt/course/17/pod-container.log
