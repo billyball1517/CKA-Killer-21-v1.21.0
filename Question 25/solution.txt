@@ -1,0 +1,2 @@
+Pretty easy just follow the docs
+https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#built-in-snapshot
