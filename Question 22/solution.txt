@@ -1,0 +1,4 @@
+#there's two ways to check certificate expiry
+#openssl x509  -noout -text -in /etc/kubernetes/pki/apiserver.crt | grep -i Validity -A2
+#kubeadm certs check-expiration | grep 'apiserver '
+echo 'kubeadm certs renew apiserver' > /opt/course/22/kubeadm-renew-certs.sh
