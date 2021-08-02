@@ -1,0 +1,2 @@
+# /opt/course/18/reason.txt
+wrong path to kubelet binary specified in service config
